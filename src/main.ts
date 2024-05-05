@@ -12,6 +12,10 @@ async function bootstrap() {
     new ValidationPipe({
     whitelist: true,//elimina info basura que no se requiere
     forbidNonWhitelisted: true,//emite un error si se manda info que no se pide
+    transform:true,
+    transformOptions: {
+      enableImplicitConversion: true,
+    }
     })
    )
 
